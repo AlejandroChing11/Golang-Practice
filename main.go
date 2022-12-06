@@ -19,6 +19,10 @@ func doubleReturnValue(a int) (c, d int) {
 	return a, a * 2
 }
 
+func areaRectangulo(base, altura int) int {
+	return base * altura
+}
+
 func main() {
 
 	normalFunction("Hello world")
@@ -30,6 +34,9 @@ func main() {
 
 	value1, value2 := doubleReturnValue(2)
 	fmt.Println("value1 and value2: ", value1, value2)
+
+	area := areaRectangulo(12, 40)
+	fmt.Println("El area del rectangulo es igual a: ", area)
 
 	//How to declare a const in Golang, They are not going to change in the future.
 	// const pi float64 = 3.14
