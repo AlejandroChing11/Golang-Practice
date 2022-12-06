@@ -1,53 +1,81 @@
 package main //Central point - package "#principal - data name"
+import "fmt"
 
-import "fmt" //it can be with brackets -- fmt is a package
+//it can be with brackets -- fmt is a package
+
+func normalFunction(message string) {
+	fmt.Println(message)
+}
+
+func tripleArgument(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+func returnValue(y int) int {
+	return y * 2
+}
+
+func doubleReturnValue(a int) (c, d int) {
+	return a, a * 2
+}
 
 func main() {
+
+	normalFunction("Hello world")
+
+	tripleArgument(12, 20, "Alejandro")
+
+	value := returnValue(5)
+	fmt.Println(value)
+
+	value1, value2 := doubleReturnValue(2)
+	fmt.Println("value1 and value2: ", value1, value2)
+
 	//How to declare a const in Golang, They are not going to change in the future.
-	const pi float64 = 3.14
-	const pi2 = 3.15
-	fmt.Println("pi1", pi)
-	fmt.Println("pi2", pi2)
+	// const pi float64 = 3.14
+	// const pi2 = 3.15
+	// fmt.Println("pi1", pi)
+	// fmt.Println("pi2", pi2)
 
 	//How to declare int varibles in Golang.
-	base := 12          //This ":" this means the variable isn't declare before.
-	var altura int = 14 //We got to type the data type explicitly
-	var ancho int       //The value of a variable that is initialized but haven't been declared yet is 0.
-	fmt.Println(base, altura, ancho)
+	// base := 12          //This ":" this means the variable isn't declare before.
+	// var altura int = 14 //We got to type the data type explicitly
+	// var ancho int       //The value of a variable that is initialized but haven't been declared yet is 0.
+	// fmt.Println(base, altura, ancho)
 	//zero values
-	var a int     //Integer value
-	var b string  //String value
-	var d bool    //True-False boolean
-	var c float64 //Float64 value
-	fmt.Println(a, b, c, d)
+	// var a int     //Integer value
+	// var b string  //String value
+	// var d bool    //True-False boolean
+	// var c float64 //Float64 value
+	// fmt.Println(a, b, c, d)
 
 	//Area de un cuadrado
-	const baseCuadrado = 12 //camelCase
-	const alturaCuadrado = 14
-	area := baseCuadrado * alturaCuadrado //We use ":=" because we used other variables that were already declared
-	fmt.Println("La base del cuadrado es: ", baseCuadrado, "La altura del cuadrado es: ", alturaCuadrado, "Y el area del cuadrado es: ", area)
+	// const baseCuadrado = 12 //camelCase
+	// const alturaCuadrado = 14
+	// area := baseCuadrado * alturaCuadrado //We use ":=" because we used other variables that were already declared
+	// fmt.Println("La base del cuadrado es: ", baseCuadrado, "La altura del cuadrado es: ", alturaCuadrado, "Y el area del cuadrado es: ", area)
 
 	//Let's learn arithmetic operations
-	x := 100
-	y := 10
-	result := x + y
-	resta := x - y
-	division := x / y
-	mod := x % y
-	multiplication := x * y
+	// x := 100
+	// y := 10
+	// result := x + y
+	// resta := x - y
+	// division := x / y
+	// mod := x % y
+	// multiplication := x * y
 	//Incremental
-	x++
+	// x++
 
-	fmt.Println("Suma", result)
-	fmt.Println("Resta", resta)
-	fmt.Println("Division", division)
-	fmt.Println("Modulo", mod)
-	fmt.Println("Multiplication", multiplication)
-	fmt.Println("Incremental", x)
+	// fmt.Println("Suma", result)
+	// fmt.Println("Resta", resta)
+	// fmt.Println("Division", division)
+	// fmt.Println("Modulo", mod)
+	// fmt.Println("Multiplication", multiplication)
+	// fmt.Println("Incremental", x)
 
 	//decremental
-	x--
-	fmt.Println("Declemental", x)
+	// x--
+	// fmt.Println("Declemental", x)
 
 	//primeral data types
 	//Numeros enteros
@@ -80,21 +108,21 @@ func main() {
 	//FMT is a package
 	//We can interact with the console with this package
 	//Println
-	var helloMessage string = "Hello"
-	var worldMesage string = "World"
-	fmt.Println(helloMessage, worldMesage)
+	// var helloMessage string = "Hello"
+	// var worldMesage string = "World"
+	// fmt.Println(helloMessage, worldMesage)
 	//PrintF
-	nombre := "Alejandro"
-	curso := 500
+	// nombre := "Alejandro"
+	// curso := 500
 	//"% is used to data parsing"
-	fmt.Printf("%s tiene mas de %d amigos\n", nombre, curso)
-	fmt.Printf("%v tiene mas de %v amigos\n", nombre, curso)
+	// fmt.Printf("%s tiene mas de %d amigos\n", nombre, curso)
+	// fmt.Printf("%v tiene mas de %v amigos\n", nombre, curso)
 	//Sprintf
-	message := fmt.Sprintf("%s tiene mas de %d amigos", nombre, curso)
-	fmt.Println(message)
+	// message := fmt.Sprintf("%s tiene mas de %d amigos", nombre, curso)
+	// fmt.Println(message)
 	// Data Types.
-	fmt.Printf("helloMessage: %T \n", helloMessage)
-	fmt.Printf("curso: %T \n", curso)
-	fmt.Printf("nombre: %T \n", nombre)
+	// fmt.Printf("helloMessage: %T \n", helloMessage)
+	// fmt.Printf("curso: %T \n", curso)
+	// fmt.Printf("nombre: %T \n", nombre)
 
 }
