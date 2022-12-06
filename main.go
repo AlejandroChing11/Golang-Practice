@@ -26,4 +26,26 @@ func main() {
 	const alturaCuadrado = 14
 	area := baseCuadrado * alturaCuadrado //We use ":=" because we used other variables that were already declared
 	fmt.Println("La base del cuadrado es: ", baseCuadrado, "La altura del cuadrado es: ", alturaCuadrado, "Y el area del cuadrado es: ", area)
+
+	//Let's learn arithmetic operations
+	x := 100
+	y := 10
+	result := x + y
+	resta := x - y
+	division := x / y
+	mod := x % y
+	multiplication := x * y
+	//Incremental
+	x++
+
+	fmt.Println("Suma", result)
+	fmt.Println("Resta", resta)
+	fmt.Println("Division", division)
+	fmt.Println("Modulo", mod)
+	fmt.Println("Multiplication", multiplication)
+	fmt.Println("Incremental", x)
+
+	//decremental
+	x--
+	fmt.Println("Declemental", x)
 }
