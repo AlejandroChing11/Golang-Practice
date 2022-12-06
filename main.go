@@ -76,4 +76,25 @@ func main() {
 	//Complex64 = Real e Imaginario float32
 	//Complex128 = Real e Imaginario float64
 	//Ejemplo : c:=10 + 8i
+
+	//FMT is a package
+	//We can interact with the console with this package
+	//Println
+	var helloMessage string = "Hello"
+	var worldMesage string = "World"
+	fmt.Println(helloMessage, worldMesage)
+	//PrintF
+	nombre := "Alejandro"
+	curso := 500
+	//"% is used to data parsing"
+	fmt.Printf("%s tiene mas de %d amigos\n", nombre, curso)
+	fmt.Printf("%v tiene mas de %v amigos\n", nombre, curso)
+	//Sprintf
+	message := fmt.Sprintf("%s tiene mas de %d amigos", nombre, curso)
+	fmt.Println(message)
+	// Data Types.
+	fmt.Printf("helloMessage: %T \n", helloMessage)
+	fmt.Printf("curso: %T \n", curso)
+	fmt.Printf("nombre: %T \n", nombre)
+
 }
