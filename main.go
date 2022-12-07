@@ -1,5 +1,9 @@
 package main //Central point - package "#principal - data name"
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"strconv"
+)
 
 //it can be with brackets -- fmt is a package
 
@@ -27,9 +31,9 @@ func main() {
 
 	//For cycles in Golang.
 	// For conditional (Tradiocional one)
-	for i := 0; i <= 10; i++ {
-		fmt.Println(i)
-	}
+	// for i := 0; i <= 10; i++ {
+	// 	fmt.Println(i)
+	// }
 
 	// fmt.Printf("\n")
 
@@ -41,18 +45,18 @@ func main() {
 	// }
 
 	//For forever. It's a loop that is not going to stop.
-	counterForever := 0
-	for {
-		fmt.Println(counterForever)
-		counterForever++
-	}
+	// counterForever := 0
+	// for {
+	// 	fmt.Println(counterForever)
+	// 	counterForever++
+	// }
 
 	//Reto
-	counter := 10
-	for counter > 0 {
-		fmt.Println(counter)
-		counter--
-	}
+	// counter := 10
+	// for counter > 0 {
+	// 	fmt.Println(counter)
+	// 	counter--
+	// }
 	// 	normalFunction("Hello world")
 
 	// 	tripleArgument(12, 20, "Alejandro")
@@ -159,5 +163,33 @@ func main() {
 	// fmt.Printf("helloMessage: %T \n", helloMessage)
 	// fmt.Printf("curso: %T \n", curso)
 	// fmt.Printf("nombre: %T \n", nombre)
+
+	//Conditionals in Golang.
+	valor1 := 1
+	valor2 := 1
+	if valor1 == 1 {
+		fmt.Println("Es igual a 1")
+	} else {
+		fmt.Println("No es igual a 1")
+	}
+
+	// With &&
+	if valor1 == 1 && valor2 == 1 {
+		fmt.Println("Es verdad")
+	}
+
+	// With ||
+	if valor1 == 1 || valor2 == 2 {
+		fmt.Println("Es verdad")
+	}
+
+	//Convert string to int
+	//nill indica si una funcion indicada no tiene un error.
+	//value = va a guardar el valor y error = va a guardar el error siempre y cuandoe exista
+	value, err := strconv.Atoi("100")
+	if err != nil { //nill means when a function has an error
+		log.Fatal(err) //This is to print the error message
+	}
+	fmt.Println(value) //This is to print the value converted to int
 
 }
