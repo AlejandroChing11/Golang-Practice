@@ -27,6 +27,22 @@ import (
 // 	return base * altura
 // }
 
+func par(num int) {
+	if num%2 == 0 {
+		fmt.Println("Es par")
+	} else {
+		fmt.Println("Es impar")
+	}
+}
+
+func password(user, passwords string) {
+	if user != "" && passwords != "" {
+		fmt.Println("El usuario ", user, "Es valido y la contraseña ", passwords, "Es valida")
+	} else {
+		fmt.Println("Inteneta de nuevo")
+	}
+}
+
 func main() {
 
 	//For cycles in Golang.
@@ -192,4 +208,7 @@ func main() {
 	}
 	fmt.Println(value) //This is to print the value converted to int
 
+	//Reto
+	par(2)
+	password("Alejandro", "Alejandro1102")
 }
