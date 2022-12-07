@@ -26,19 +26,19 @@ import "fmt"
 func main() {
 
 	//For cycles in Golang.
-	//For conditional (Tradiocional one)
+	For conditional (Tradiocional one)
 	for i := 0; i <= 10; i++ {
 		fmt.Println(i)
 	}
 
-	fmt.Printf("\n")
+	// fmt.Printf("\n")
 
 	//For While. Basically it's While because you have to initialize a variable and then start the cycle with the condition and then you have to put the task and the incremental or the function
-	counter := 0
-	for counter <= 10 {
-		fmt.Println(counter)
-		counter++
-	}
+	// counter := 0
+	// for counter <= 10 {
+	// 	fmt.Println(counter)
+	// 	counter++
+	// }
 
 	//For forever. It's a loop that is not going to stop.
 	counterForever := 0
@@ -47,6 +47,12 @@ func main() {
 		counterForever++
 	}
 
+	//Reto
+	counter := 10
+	for counter > 0 {
+		fmt.Println(counter)
+		counter--
+	}
 	// 	normalFunction("Hello world")
 
 	// 	tripleArgument(12, 20, "Alejandro")
