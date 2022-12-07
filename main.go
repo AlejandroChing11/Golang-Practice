@@ -3,40 +3,62 @@ import "fmt"
 
 //it can be with brackets -- fmt is a package
 
-func normalFunction(message string) {
-	fmt.Println(message)
-}
+// func normalFunction(message string) {
+// 	fmt.Println(message)
+// }
 
-func tripleArgument(a, b int, c string) {
-	fmt.Println(a, b, c)
-}
+// func tripleArgument(a, b int, c string) {
+// 	fmt.Println(a, b, c)
+// }
 
-func returnValue(y int) int {
-	return y * 2
-}
+// func returnValue(y int) int {
+// 	return y * 2
+// }
 
-func doubleReturnValue(a int) (c, d int) {
-	return a, a * 2
-}
+// func doubleReturnValue(a int) (c, d int) {
+// 	return a, a * 2
+// }
 
-func areaRectangulo(base, altura int) int {
-	return base * altura
-}
+// func areaRectangulo(base, altura int) int {
+// 	return base * altura
+// }
 
 func main() {
 
-	normalFunction("Hello world")
+	//For cycles in Golang.
+	//For conditional (Tradiocional one)
+	for i := 0; i <= 10; i++ {
+		fmt.Println(i)
+	}
 
-	tripleArgument(12, 20, "Alejandro")
+	fmt.Printf("\n")
 
-	value := returnValue(5)
-	fmt.Println(value)
+	//For While. Basically it's While because you have to initialize a variable and then start the cycle with the condition and then you have to put the task and the incremental or the function
+	counter := 0
+	for counter <= 10 {
+		fmt.Println(counter)
+		counter++
+	}
 
-	value1, value2 := doubleReturnValue(2)
-	fmt.Println("value1 and value2: ", value1, value2)
+	//For forever. It's a loop that is not going to stop.
+	counterForever := 0
+	for {
+		fmt.Println(counterForever)
+		counterForever++
+	}
 
-	area := areaRectangulo(12, 40)
-	fmt.Println("El area del rectangulo es igual a: ", area)
+	// 	normalFunction("Hello world")
+
+	// 	tripleArgument(12, 20, "Alejandro")
+
+	// 	value := returnValue(5)
+	// 	fmt.Println(value)
+
+	// 	value1, value2 := doubleReturnValue(2)
+	// 	fmt.Println("value1 and value2: ", value1, value2)
+
+	// 	area := areaRectangulo(12, 40)
+	// 	fmt.Println("El area del rectangulo es igual a: ", area)
 
 	//How to declare a const in Golang, They are not going to change in the future.
 	// const pi float64 = 3.14
