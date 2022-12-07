@@ -26,7 +26,7 @@ import "fmt"
 func main() {
 
 	//For cycles in Golang.
-	For conditional (Tradiocional one)
+	// For conditional (Tradiocional one)
 	for i := 0; i <= 10; i++ {
 		fmt.Println(i)
 	}
