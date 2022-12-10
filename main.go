@@ -25,19 +25,32 @@ import (
 // 	return base * altura
 // }
 
-func par(num int) {
-	if num%2 == 0 {
-		fmt.Println("Es par")
-	} else {
-		fmt.Println("Es impar")
-	}
-}
+// func par(num int) {
+// 	if num%2 == 0 {
+// 		fmt.Println("Es par")
+// 	} else {
+// 		fmt.Println("Es impar")
+// 	}
+// }
 
-func password(user, passwords string) {
-	if user != "" && passwords != "" {
-		fmt.Println("El usuario ", user, "Es valido y la contraseña ", passwords, "Es valida")
+// func password(user, passwords string) {
+// 	if user != "" && passwords != "" {
+// 		fmt.Println("El usuario ", user, "Es valido y la contraseña ", passwords, "Es valida")
+// 	} else {
+// 		fmt.Println("Inteneta de nuevo")
+// 	}
+// }
+
+func isPalindrome(text string) {
+	var textReverse string
+	for i := len(text) - 1; i >= 0; i-- {
+		textReverse += string(text[i])
+	}
+
+	if text == textReverse {
+		fmt.Println("Es palindromo")
 	} else {
-		fmt.Println("Inteneta de nuevo")
+		fmt.Println("No es palindromo")
 	}
 }
 
@@ -254,38 +267,46 @@ func main() {
 	// }
 
 	//Learning Arrays in Golang - Go (QThey are unmutable)
-	var array [4]int
-	array[0] = 1
-	array[1] = 2
-	fmt.Println(array, len(array), cap(array))
-	fmt.Printf("\n")
-	var nombres [3]string
-	nombres[0] = "Jenzey"
-	nombres[1] = "Alejandro"
-	nombres[2] = "Mei li"
-	fmt.Println(nombres, len(nombres), cap(nombres)) //len = longitud del array , cap = array capacity (those are important functions)
-	fmt.Printf("\n")
+	// var array [4]int
+	// array[0] = 1
+	// array[1] = 2
+	// fmt.Println(array, len(array), cap(array))
+	// fmt.Printf("\n")
+	// var nombres [3]string
+	// nombres[0] = "Jenzey"
+	// nombres[1] = "Alejandro"
+	// nombres[2] = "Mei li"
+	// fmt.Println(nombres, len(nombres), cap(nombres)) //len = longitud del array , cap = array capacity (those are important functions)
+	// fmt.Printf("\n")
 
 	//Slice  (They can be mutable)
-	slice := []int{0, 1, 2, 3, 4, 5}
-	fmt.Println(slice, len(slice), cap(slice))
-	fmt.Printf("\n")
+	// slice := []int{0, 1, 2, 3, 4, 5}
+	// fmt.Println(slice, len(slice), cap(slice))
+	// fmt.Printf("\n")
 
 	//Slicing
 	//Methods
-	fmt.Println(slice[0])
-	fmt.Println(slice[:3])
-	fmt.Println(slice[2:4])
-	fmt.Println(slice[4:])
-	fmt.Printf("\n")
+	// fmt.Println(slice[0])
+	// fmt.Println(slice[:3])
+	// fmt.Println(slice[2:4])
+	// fmt.Println(slice[4:])
+	// fmt.Printf("\n")
 
 	//Append
-	slice = append(slice, 6)
-	fmt.Println(slice)
-	fmt.Printf("\n")
+	// slice = append(slice, 6)
+	// fmt.Println(slice)
+	// fmt.Printf("\n")
 
 	// Apend with a new list.
-	newSlice := []int{7, 8, 9, 10}
-	slice = append(slice, newSlice...) //"..." means that Go is going to add the new elements independently
-	fmt.Println(slice)
+	// newSlice := []int{7, 8, 9, 10}
+	// slice = append(slice, newSlice...) //"..." means that Go is going to add the new elements independently
+	// fmt.Println(slice)
+
+	// slice := []string{"Hola", "que", "haces"} //This is not an array, this is a slice.
+
+	// for _, value := range slice { //We use the for loop. the first thing you have to initialize a variable and then a value that is the one that is going to have the values of the slice
+	// fmt.Println(value)
+	// }
+
+	isPalindrome("reconocer")
 }
