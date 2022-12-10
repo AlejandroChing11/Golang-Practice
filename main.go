@@ -253,7 +253,7 @@ func main() {
 
 	// }
 
-	//Learning Arrays in Golang - Go.
+	//Learning Arrays in Golang - Go (QThey are unmutable)
 	var array [4]int
 	array[0] = 1
 	array[1] = 2
@@ -264,4 +264,28 @@ func main() {
 	nombres[1] = "Alejandro"
 	nombres[2] = "Mei li"
 	fmt.Println(nombres, len(nombres), cap(nombres)) //len = longitud del array , cap = array capacity (those are important functions)
+	fmt.Printf("\n")
+
+	//Slice  (They can be mutable)
+	slice := []int{0, 1, 2, 3, 4, 5}
+	fmt.Println(slice, len(slice), cap(slice))
+	fmt.Printf("\n")
+
+	//Slicing
+	//Methods
+	fmt.Println(slice[0])
+	fmt.Println(slice[:3])
+	fmt.Println(slice[2:4])
+	fmt.Println(slice[4:])
+	fmt.Printf("\n")
+
+	//Append
+	slice = append(slice, 6)
+	fmt.Println(slice)
+	fmt.Printf("\n")
+
+	// Apend with a new list.
+	newSlice := []int{7, 8, 9, 10}
+	slice = append(slice, newSlice...) //"..." means that Go is going to add the new elements independently
+	fmt.Println(slice)
 }
