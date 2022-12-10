@@ -1,8 +1,5 @@
 package main //Central point - package "#principal - data name"
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 //it can be with brackets -- fmt is a package
 
@@ -42,21 +39,22 @@ import (
 // 	}
 // }
 
-func isPalindrome(text string) {
-	var textReverse string
-	for i := len(text) - 1; i >= 0; i-- {
-		textReverse += string(text[i])
-	}
+// func isPalindrome(text string) {
+// 	var textReverse string
+// 	for i := len(text) - 1; i >= 0; i-- {
+// 		textReverse += string(text[i])
+// 	}
 
-	if text == textReverse {
-		fmt.Println("Es palindromo")
-	} else {
-		fmt.Println("No es palindromo")
-	}
+// 	if text == textReverse {
+// 		fmt.Println("Es palindromo")
+// 	} else {
+// 		fmt.Println("No es palindromo")
+// 	}
 
-}
+// }
 
 func main() {
+	// isPalindrome(strings.ToLower("Reconocer"))
 
 	//For cycles in Golang.
 	// For conditional (Tradiocional one)
@@ -145,7 +143,7 @@ func main() {
 	// x--
 	// fmt.Println("Declemental", x)
 
-	//primeral data types
+	//primeral data types\clases\2232-programacion-golang\35750-llave-valor-con-maps\
 	//Numeros enteros
 	//int = Depende del OS (32 o 64 bits)
 	//int8 = 8bits = -128 a 127
@@ -310,5 +308,23 @@ func main() {
 	// fmt.Println(value)
 	// }
 
-	isPalindrome(strings.ToLower("Reconocer"))
+	//Maps in Golang such as dictionaries in python and objects in javascript
+	m := make(map[string]int) //String is the value, int is the key
+	m["Jose"] = 14
+	m["Alejandro"] = 20
+	m["Maria"] = 14
+
+	fmt.Println(m)
+
+	//Recorrer un map with range
+	for i, value := range m {
+		fmt.Println(i, value)
+	}
+
+	fmt.Printf("\n")
+
+	//Find a value.
+	value, sure := m["Jose"] //var "ok" is a variable that indicates if the value exists in the map (it can has whatever name)
+	fmt.Println(value, sure)
+
 }
