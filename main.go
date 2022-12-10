@@ -179,23 +179,23 @@ func main() {
 	// fmt.Printf("nombre: %T \n", nombre)
 
 	//Conditionals in Golang.
-	valor1 := 1
-	valor2 := 1
-	if valor1 == 1 {
-		fmt.Println("Es igual a 1")
-	} else {
-		fmt.Println("No es igual a 1")
-	}
+	// valor1 := 1
+	// valor2 := 1
+	// if valor1 == 1 {
+	// 	fmt.Println("Es igual a 1")
+	// } else {
+	// 	fmt.Println("No es igual a 1")
+	// }
 
 	// With &&
-	if valor1 == 1 && valor2 == 1 {
-		fmt.Println("Es verdad")
-	}
+	// if valor1 == 1 && valor2 == 1 {
+	// 	fmt.Println("Es verdad")
+	// }
 
 	// With ||
-	if valor1 == 1 || valor2 == 2 {
-		fmt.Println("Es verdad")
-	}
+	// if valor1 == 1 || valor2 == 2 {
+	// 	fmt.Println("Es verdad")
+	// }
 
 	//Convert string to int
 	//nill indica si una funcion indicada no tiene un error.
@@ -212,44 +212,56 @@ func main() {
 
 	//Learning switch
 
-	switch modulo := 4 % 2; modulo { //We use this switch when we are going to evaluate over a unique variable.
-	case 0:
-		fmt.Println("Es par")
-	default:
-		fmt.Println("Es impar")
-	}
+	// switch modulo := 4 % 2; modulo { //We use this switch when we are going to evaluate over a unique variable.
+	// case 0:
+	// 	fmt.Println("Es par")
+	// default:
+	// 	fmt.Println("Es impar")
+	// }
 
 	//Switch Without conditions
-	value := 50
-	switch {
-	case value > 100: //We use this switch when we are going to add multiple conditions
-		fmt.Println("Es mayor que 100")
-	case value < 0:
-		fmt.Println("Es menor a 0")
-	default:
-		fmt.Println("No condition")
-	}
+	// value := 50
+	// switch {
+	// case value > 100: //We use this switch when we are going to add multiple conditions
+	// 	fmt.Println("Es mayor que 100")
+	// case value < 0:
+	// 	fmt.Println("Es menor a 0")
+	// default:
+	// 	fmt.Println("No condition")
+	// }
 
 	//The use of defer, break and continue
 	//Defer.
-	defer fmt.Println("Hola") //We use defer to keep the function to the final, so we can use it when we are connecting to a database and we want to shut douwn the connection
-	fmt.Println("Mundo")
+	// defer fmt.Println("Hola") //We use defer to keep the function to the final, so we can use it when we are connecting to a database and we want to shut douwn the connection
+	// fmt.Println("Mundo")
 
 	//Continue break (We usse both on for)
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+	// for i := 0; i < 10; i++ {
+	// 	fmt.Println(i)
 
-		//continue
-		if i == 2 {
-			fmt.Println("Es dos")
-			continue //We use continue when a the condition on the for contains something that is interesting for us and we want to continue the loop. For example when we have an error on the loop but it is controlled so we can move on the code.
-		}
+	//continue
+	// if i == 2 {
+	// fmt.Println("Es dos")
+	// continue //We use continue when a the condition on the for contains something that is interesting for us and we want to continue the loop. For example when we have an error on the loop but it is controlled so we can move on the code.
+	// }
 
-		//Break
-		if i == 8 {
-			fmt.Println("Break")
-			break //We use break to broke the loop.
-		}
+	//Break
+	// if i == 8 {
+	// fmt.Println("Break")
+	// break //We use break to broke the loop.
+	// }
 
-	}
+	// }
+
+	//Learning Arrays in Golang - Go.
+	var array [4]int
+	array[0] = 1
+	array[1] = 2
+	fmt.Println(array, len(array), cap(array))
+	fmt.Printf("\n")
+	var nombres [3]string
+	nombres[0] = "Jenzey"
+	nombres[1] = "Alejandro"
+	nombres[2] = "Mei li"
+	fmt.Println(nombres, len(nombres), cap(nombres)) //len = longitud del array , cap = array capacity (those are important functions)
 }
