@@ -1,6 +1,7 @@
 package main //Central point - package "#principal - data name"
 import (
 	"fmt"
+	"strings"
 )
 
 //it can be with brackets -- fmt is a package
@@ -52,6 +53,7 @@ func isPalindrome(text string) {
 	} else {
 		fmt.Println("No es palindromo")
 	}
+
 }
 
 func main() {
@@ -308,5 +310,5 @@ func main() {
 	// fmt.Println(value)
 	// }
 
-	isPalindrome("reconocer")
+	isPalindrome(strings.ToLower("Reconocer"))
 }
